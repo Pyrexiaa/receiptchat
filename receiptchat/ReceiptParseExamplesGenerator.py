@@ -1,6 +1,6 @@
 from receiptchat.gdrive.GoogleDriveService import GoogleDriveService
 from receiptchat.gdrive.GoogleDriveLoader import GoogleDriveLoader
-from receiptchat.openai.VisionReceiptExtractor import VisionRecieptExtractor
+from receiptchat.openai.VisionReceiptExtractor import VisionReceiptExtractor
 import os
 import json
 from typing import List
@@ -25,7 +25,7 @@ class ReceiptParseExamplesGenerator:
 
         self.gdrive_service = GoogleDriveService().build()
         self.gdrive_loader = GoogleDriveLoader(self.gdrive_service)
-        self.vision_extractor = VisionRecieptExtractor(
+        self.vision_extractor = VisionReceiptExtractor(
             self.gdrive_loader, api_key=secrets["OPENAI_API_KEY"]
         )
 

@@ -42,6 +42,7 @@ class GoogleDriveLoader:
                     )
                     .execute()
                 )
+                print("Response: ",response)
                 for file in response.get("files"):
                     # Process change
                     print(f'Found file: {file.get("name")}, {file.get("id")}')

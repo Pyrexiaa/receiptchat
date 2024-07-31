@@ -26,3 +26,6 @@ def main_generate_examples(n_examples=10):
     secrets = load_secrets()
     parser = ReceiptParseExamplesGenerator(secrets)
     parser.update_examples(n_update=n_examples)
+
+if __name__ == '__main__':
+    main_generate_examples()

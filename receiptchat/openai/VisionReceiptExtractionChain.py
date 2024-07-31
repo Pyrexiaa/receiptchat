@@ -3,7 +3,7 @@ from langchain_core.messages import HumanMessage
 from langchain_core.runnables import chain
 from langchain_core.output_parsers import JsonOutputParser
 import base64
-from langchain.callbacks import get_openai_callback
+from langchain_community.callbacks import get_openai_callback
 from receiptchat.openai.prompts import VisionReceiptExtractionPrompt
 from receiptchat.openai.templates import ReceiptInformation
 

@@ -15,7 +15,7 @@ class VisionReceiptExtractor:
         gdrive_service,
         api_key: str,
         temperature: int = 0,
-        model: str = "gpt-4-vision-preview",
+        model: str = "gpt-4-turbo",
     ) -> None:
 
         self.llm = ChatOpenAI(api_key=api_key, temperature=temperature, model=model)
@@ -50,6 +50,7 @@ class VisionReceiptExtractor:
     def call_llm(self, prepared_data: dict) -> tuple:
 
         with NamedTemporaryFile(suffix=".jpeg") as temp_file:
+            temp_file.close()
             prepared_data["image"].save(temp_file.name)
             res, cb = self.extractor.run_and_count_tokens(
                 {"image_path": temp_file.name}

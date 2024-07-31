@@ -10,7 +10,7 @@ from langchain_core.messages import (
 from langchain_core.pydantic_v1 import BaseModel
 from receiptchat.openai.prompts import TextReceiptExtractionPrompt
 from receiptchat.openai.templates import ReceiptInformation, ReceiptItem
-from langchain.callbacks import get_openai_callback
+from langchain_community.callbacks import get_openai_callback
 
 
 class Example(TypedDict):

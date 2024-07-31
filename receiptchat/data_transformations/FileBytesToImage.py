@@ -7,6 +7,7 @@ import pytesseract
 import io
 from receiptchat.data_transformations.constants import DEFAULT_DPI
 
+pytesseract.pytesseract.tesseract_cmd = 'C:/Program Files/Tesseract-OCR/tesseract.exe'
 
 class FileBytesToImage(ABC):
 
